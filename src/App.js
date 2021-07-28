@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import '../src/App.css';
+import React, { useState, useEffect } from 'react';
+import SolarSystem from './components/SolarSystem';
+import InfoDisplay from './components/InfoDisplay';
+import Stars from './images/stars.png';
+import TextData, {
+  mercuryData,
+  venusData,
+  earthData,
+  marsData,
+  jupiterData,
+  saturnData,
+  uranusData,
+  neptuneData,
+} from './Textdata';
 
 function App() {
+  const [selected, setSelected] = useState(marsData);
+  const [showSettings, setShowSettings] = useState(false);
+  const [showNames, setShowNames] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App' style={{ backgroundImage: `${Stars}` }}>
+      <div className='container'>
+        <div className='empty-container'></div>
+        <SolarSystem
+          showSettings={showSettings}
+          handleShowSettings={setShowSettings}
+          showNames={showNames}
+          handleShowNames={setShowNames}
+        />
+        <InfoDisplay selectedPlanet={selected} handleSelected={setSelected} />
+      </div>
     </div>
   );
 }
