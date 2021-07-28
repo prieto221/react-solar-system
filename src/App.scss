@@ -304,14 +304,18 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 1.5em;
+  margin: 1em 0;
 
   h1 {
     margin: 1em 0 0 0;
+    font-size: 30px;
   }
 }
 
 .footer-container {
   // background-color: rgb(35, 104, 94);
+  margin-top: 1em;
   background-color: darken($primary-color, 20%);
   color: white;
   height: 100px;
