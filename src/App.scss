@@ -75,13 +75,15 @@ html {
     top: 0;
     left: 0;
     height: 70px;
-    width: 50vw;
+    width: 24vw;
+    min-width: 450px;
     display: flex;
     align-items: center;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
     opacity: 0.6;
-    // border-radius: 0 0 10px 10px;
+    border-radius: 0 15px 15px 0px;
+    // box-shadow: 0px -5px 10px 10px $secondary-color;
   }
 
   .settings-container.hideSettings {
@@ -645,7 +647,6 @@ html {
   .space-images-container {
     display: flex;
     flex-wrap: wrap;
-    border: 3px solid rgb(53, 101, 141);
     height: auto;
     width: 250px;
     max-width: auto;
@@ -681,7 +682,7 @@ html {
 @media (max-width: 800px) {
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100vw;
     overflow: hidden;
   }
