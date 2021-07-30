@@ -14,7 +14,12 @@ const NavLinks = () => {
           <a href='#about_link'>About</a>
         </li>
         <li className='login'>
-          <a href='#login_link'>Log In</a>
+          <a
+            href='#login_link'
+            onClick={(e) => alert('Login has not been implemented yet!')}
+          >
+            Log In
+          </a>
         </li>
       </ul>
     </div>

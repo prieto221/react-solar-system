@@ -6,7 +6,7 @@ const Quiz = () => {
       <div className='quiz-container'>
         <h1>Quiz</h1>
         <h3>Test your knowledge</h3>
-        <p>The quiz has not been developed yet!</p>
+        <p>The quiz has not been implemented yet!</p>
       </div>
     </a>
   );

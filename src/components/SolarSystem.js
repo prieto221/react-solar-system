@@ -117,13 +117,6 @@ const SolarSystem = ({
         }
       >
         <div className='settings'>
-          {/* <input
-                type='checkbox'
-                id='showNames'
-                name='showNames'
-                value='Bike'
-              ></input> */}
-          {/* <label for='showNames'>Show Planet Labels</label> */}
           <button
             className={showNames ? '' : 'pressed'}
             onClick={(e) => handleShowNames(!showNames)}
@@ -136,7 +129,11 @@ const SolarSystem = ({
           >
             Day Count
           </button>
-          <button>Toggle Legend</button>
+          <button
+            onClick={(e) => alert('Legend has not been implemented yet!')}
+          >
+            Toggle Legend
+          </button>
         </div>
       </div>
       <div className='solar-system'>
