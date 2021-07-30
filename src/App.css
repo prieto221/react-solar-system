@@ -171,10 +171,11 @@ html {
   cursor: pointer;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  border: 3px solid #2076bd;
+  border: 5px solid black;
+  box-shadow: 2px 2px 15px 10px black;
   height: auto;
   width: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
 }
 
@@ -219,8 +220,9 @@ html {
 }
 
 .data-and-image-container img {
-  border: 3px solid #2076bd;
+  box-shadow: 2px 2px 40px 10px rgba(44, 111, 236, 0.356);
   margin: 0 1vw;
+  border-radius: 10px;
   height: 15vw;
   width: 15vw;
 }

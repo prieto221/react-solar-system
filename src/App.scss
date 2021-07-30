@@ -8,6 +8,8 @@ $image-border-color: rgb(32, 118, 189);
 $span-name-color: rgb(32, 118, 189);
 $primary-color: rgb(32, 118, 189);
 $secondary-color: rgb(156, 56, 56);
+// $image-border: 10px outset grey;
+$image-border: 6px inset rgb(147, 166, 175);
 
 html {
   height: 100%;
@@ -193,10 +195,13 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   // flex-wrap: wrap;
-  border: 3px solid $image-border-color;
+  // border: 3px solid $image-border-color;
+  // border: $image-border;
+  border: 5px solid black;
+  box-shadow: 2px 2px 15px 10px black;
   height: auto;
   width: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   // background-color: rgb(255, 228, 76);
   background-color: white;
   // background-color: purple;
@@ -247,8 +252,13 @@ html {
   }
 
   img {
-    border: 3px solid $image-border-color;
+    // border: 10px outset darken($image-border-color, 10%);
+    // border: $image-border;
+    // box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+    // box-shadow: 2px 2px 30px 10px rgba(44, 111, 236, 0.356);
+    box-shadow: 2px 2px 40px 10px rgba(44, 111, 236, 0.356);
     margin: 0 1vw;
+    border-radius: 10px;
     height: 15vw;
     width: 15vw;
   }
