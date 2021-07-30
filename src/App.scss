@@ -116,6 +116,7 @@ html {
 }
 
 .info-display-container {
+  // z-index: 2;
   background-color: rgb(32, 32, 32);
   height: 100%;
   width: 50vw;
@@ -125,6 +126,7 @@ html {
   align-items: center;
   justify-content: center;
   color: white;
+  // box-shadow: 10px 0px 10px 20px rgb(32, 32, 32);
 
   h1 {
     margin: 1em 1em 1em 1em;
@@ -254,9 +256,7 @@ html {
   img {
     // border: 10px outset darken($image-border-color, 10%);
     // border: $image-border;
-    // box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
-    // box-shadow: 2px 2px 30px 10px rgba(44, 111, 236, 0.356);
-    box-shadow: 2px 2px 40px 10px rgba(44, 111, 236, 0.356);
+    box-shadow: 2px 2px 30px 6px rgba(44, 111, 236, 0.356);
     margin: 0 1vw;
     border-radius: 10px;
     height: 15vw;
@@ -338,7 +338,7 @@ html {
 }
 
 .solar-system {
-  // border: 1px solid red;
+  box-shadow: 0px 0px 10px 10px rgb(8, 8, 8);
   height: 100%;
   width: 100%;
   display: flex;

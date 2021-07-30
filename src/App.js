@@ -23,13 +23,13 @@ function App() {
     <div className='App' style={{ backgroundImage: `${Stars}` }}>
       <div className='container'>
         <div className='empty-container'></div>
+        <InfoDisplay selectedPlanet={selected} handleSelected={setSelected} />
         <SolarSystem
           showSettings={showSettings}
           handleShowSettings={setShowSettings}
           showNames={showNames}
           handleShowNames={setShowNames}
         />
-        <InfoDisplay selectedPlanet={selected} handleSelected={setSelected} />
       </div>
     </div>
   );

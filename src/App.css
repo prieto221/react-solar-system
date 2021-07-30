@@ -220,7 +220,7 @@ html {
 }
 
 .data-and-image-container img {
-  box-shadow: 2px 2px 40px 10px rgba(44, 111, 236, 0.356);
+  box-shadow: 2px 2px 30px 6px rgba(44, 111, 236, 0.356);
   margin: 0 1vw;
   border-radius: 10px;
   height: 15vw;
@@ -301,6 +301,7 @@ html {
 }
 
 .solar-system {
+  box-shadow: 0px 0px 10px 10px #080808;
   height: 100%;
   width: 100%;
   display: flex;
