@@ -116,7 +116,7 @@ html {
 }
 
 .info-display-container .scroll-bar {
-  position: relative;
+  position: absolute;
   background-color: #114066;
   display: flex;
   align-items: center;

@@ -6,12 +6,15 @@ import Planet from './Planet';
 import Quiz from './Quiz';
 import ScrollBar from './ScrollBar';
 import SpaceImages from './SpaceImages';
+import { useAuth } from '../contexts/AuthContext';
 
 const InfoDisplay = ({ selectedPlanet, handleSelected }) => {
+  const { currentUser } = useAuth();
+
   return (
     <a id='home_link'>
       <div className='info-display-container'>
-        <ScrollBar />
+        {currentUser && <ScrollBar />}
         <NavLinks />
         <h1>Solar System</h1>
         <SpaceImages handleSelected={handleSelected} />

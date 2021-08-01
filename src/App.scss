@@ -145,7 +145,7 @@ html {
   }
 
   .scroll-bar {
-    position: relative;
+    position: absolute;
     background-color: darken($primary-color, 20%);
     display: flex;
     align-items: center;
