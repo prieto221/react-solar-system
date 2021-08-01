@@ -6,7 +6,7 @@ import Venus from '../images/venus.jpg';
 import Jupiter from '../images/jupiter.jpg';
 import Saturn from '../images/saturn.png';
 import Uranus from '../images/uranus.jpg';
-import Neptune from '../images/neptune.jpg';
+import Neptune from '../images/neptune3.jpg';
 import Sun from '../images/sun.jpg';
 import Moon from '../images/moon.jpg';
 import {

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  // box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 $image-border-color: rgb(32, 118, 189);
@@ -28,7 +28,7 @@ html {
   // border: 1px solid red;
 }
 
-.container {
+.container2 {
   display: flex;
 }
 
@@ -139,20 +139,30 @@ html {
     margin: 1.1em;
   }
 
-  p {
-    margin: 2em;
-    width: 40vw;
-  }
-
   img {
     height: 400px;
     width: 400px;
   }
 
+  .scroll-bar {
+    position: relative;
+    background-color: darken($primary-color, 20%);
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 50vw;
+    top: 0;
+    right: 0;
+
+    p {
+      margin-left: 40px;
+    }
+  }
+
   .navLinks {
     position: fixed;
     right: 0;
-    top: 1vh;
+    top: 6vh;
     height: 200px;
     // height: 54px;
     // width: 15vw;
@@ -201,7 +211,7 @@ html {
   // flex-wrap: wrap;
   // border: 3px solid $image-border-color;
   // border: $image-border;
-  border: 5px solid black;
+  // border: 5px solid black;
   box-shadow: 2px 2px 15px 10px black;
   height: auto;
   width: auto;
@@ -215,10 +225,12 @@ html {
     height: 100px;
     width: 100px;
 
-    transition: all 0.1s ease-in-out;
+    transition: all 1s ease-out;
 
     &:hover {
-      opacity: 0.75;
+      // opacity: 0.75;
+      // box-shadow: 0px 0px 60px 1px rgb(195, 175, 62);
+      // z-index: 2;
       // border-radius: 6px;
     }
   }
@@ -233,6 +245,7 @@ html {
   p {
     line-height: 1.5em;
     margin-top: 3em;
+    width: 40vw;
 
     span {
       font-size: 2em;
@@ -259,6 +272,7 @@ html {
     // border: 10px outset darken($image-border-color, 10%);
     // border: $image-border;
     box-shadow: 2px 2px 30px 6px rgba(44, 111, 236, 0.356);
+    // object-fit: contain;
     margin: 0 1vw;
     border-radius: 10px;
     height: 15vw;
@@ -290,13 +304,132 @@ html {
   }
 }
 
+.auth-container {
+  z-index: 3;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth {
+  background-color: rgb(114, 130, 155);
+  // opacity: 0.9;
+  border-radius: 5px;
+  max-width: 400px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  // border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card-close-btn {
+    position: absolute;
+    margin: 6px;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: $secondary-color;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .card-body {
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10px;
+      width: auto;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        width: 100%;
+
+        .form-label {
+          margin: 5px 0;
+          font-weight: bold;
+        }
+
+        .form-control {
+          padding: 0 2px;
+          line-height: 2em;
+          width: 100%;
+          // border: 1px solid lightgray;
+          border-radius: 4px;
+          box-sizing: border-box;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      button {
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        color: whitesmoke;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+.forgot-password-link {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.login-link {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 .quiz-container {
   margin: 2em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(151, 149, 23);
+  border: 4px double white;
   width: 40vw;
 
   h1 {
@@ -322,6 +455,11 @@ html {
   h1 {
     margin: 1em 0 0 0;
     font-size: 30px;
+  }
+
+  p {
+    margin: 2em;
+    width: 40vw;
   }
 }
 
@@ -680,7 +818,7 @@ html {
 }
 
 @media (max-width: 800px) {
-  .container {
+  .container2 {
     display: flex;
     flex-direction: column-reverse;
     width: 100vw;
@@ -697,12 +835,23 @@ html {
     width: 100%;
     overflow: hidden;
 
+    .cog {
+      left: 10px;
+    }
+
     .settings-container {
       width: 75vw;
+      min-width: 308px;
+
+      .settings {
+        margin-left: 50px;
+      }
     }
 
     button {
-      font-size: 10px;
+      font-size: 9px;
+      margin: 0 3px;
+      padding: 10px;
     }
   }
   .navLinks {

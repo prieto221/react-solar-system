@@ -120,17 +120,20 @@ const SolarSystem = ({
           <button
             className={showNames ? '' : 'pressed'}
             onClick={(e) => handleShowNames(!showNames)}
+            style={{ cursor: 'pointer' }}
           >
             Planet Names
           </button>
           <button
             className={showDays ? '' : 'pressed'}
             onClick={(e) => setShowDays(!showDays)}
+            style={{ cursor: 'pointer' }}
           >
             Day Count
           </button>
           <button
             onClick={(e) => alert('Legend has not been implemented yet!')}
+            style={{ cursor: 'pointer' }}
           >
             Toggle Legend
           </button>

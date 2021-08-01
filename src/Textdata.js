@@ -5,7 +5,7 @@ import MarsImg from './images/mars.jpg';
 import JupiterImg from './images/jupiter.jpg';
 import SaturnImg from './images/saturn.png';
 import UranusImg from './images/uranus.jpg';
-import NeptuneImg from './images/neptune.jpg';
+import NeptuneImg from './images/neptune3.jpg';
 import SunImg from './images/sun.jpg';
 import MoonImg from './images/moon.jpg';
 
