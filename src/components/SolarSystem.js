@@ -132,6 +132,7 @@ const SolarSystem = ({
             Day Count
           </button>
           <button
+            className='toggle-legend'
             onClick={(e) => alert('Legend has not been implemented yet!')}
             style={{ cursor: 'pointer' }}
           >

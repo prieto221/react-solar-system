@@ -23,6 +23,8 @@ import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
 import ForgotPassword from './components/ForgotPassword';
 import UpdateProfile from './components/UpdateProfile';
+import MobileNavLinks from './components/MobileNavLinks';
+import HamburgerMenu from './components/HamburgerMenu';
 
 function App() {
   const [selected, setSelected] = useState(marsData);
@@ -55,6 +57,8 @@ function App() {
           <Route path='/signup' component={Signup} />
           <Route path='/login' component={Login} />
           <Route path='/forgot-password' component={ForgotPassword} />
+          <Route path='/mobile-nav-links' exact component={MobileNavLinks} />
+          <HamburgerMenu />
         </AuthProvider>
       </Router>
     </>

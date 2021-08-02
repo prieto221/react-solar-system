@@ -36,21 +36,13 @@ html {
 .solar-system-container .cog {
   cursor: pointer;
   position: absolute;
-  background-color: grey;
+  background-color: lightgray;
   border-radius: 4px;
   left: 20px;
   top: 20px;
   height: 30px;
   width: 30px;
-  z-index: 2;
-}
-
-.solar-system-container .cog:hover {
-  background-color: white;
-  left: 19px;
-  top: 19px;
-  height: 32px;
-  width: 32px;
+  z-index: 4;
 }
 
 .solar-system-container .settings-container {
@@ -63,10 +55,12 @@ html {
   min-width: 450px;
   display: flex;
   align-items: center;
+  justify-content: center;
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
   opacity: 0.6;
   border-radius: 0 15px 15px 0px;
+  z-index: 3;
 }
 
 .solar-system-container .settings-container.hideSettings {
@@ -178,6 +172,27 @@ html {
 
 .info-display-container .navLinks ul .login a:hover {
   background-color: #2076bd;
+}
+
+.hamburger-container {
+  width: 35px;
+  height: 30px;
+  position: fixed;
+  top: 25px;
+  right: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.hamburger-container .line {
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background-color: lightgray;
 }
 
 .space-images-container {
@@ -464,6 +479,10 @@ html {
 }
 
 .hide-days .solar-system .planet-span-day {
+  visibility: hidden;
+}
+
+.toggle-legend {
   visibility: hidden;
 }
 
@@ -777,6 +796,40 @@ html {
     width: 100vw;
     overflow: hidden;
   }
+  .hamburger-container {
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-nav-links {
+    z-index: 5;
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #464545;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-nav-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+  .mobile-nav-links ul li {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+  }
   .empty-container {
     height: 0;
     width: 0;
@@ -791,13 +844,19 @@ html {
     left: 10px;
   }
   .solar-system-container .settings-container {
-    width: 75vw;
-    min-width: 308px;
+    width: 65vw;
+    height: 80px;
+    min-width: 250px;
   }
   .solar-system-container .settings-container .settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     margin-left: 50px;
   }
   .solar-system-container button {
+    height: 50px;
     font-size: 9px;
     margin: 0 3px;
     padding: 10px;
@@ -810,6 +869,12 @@ html {
     height: auto;
     width: 100%;
     overflow: hidden;
+  }
+  .info-display-container .scroll-bar {
+    width: 100vw;
+  }
+  .info-display-container .scroll-bar p {
+    margin-left: 10px;
   }
   .info-display-container .data-container {
     width: 60vw;
