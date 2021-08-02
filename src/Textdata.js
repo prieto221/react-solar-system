@@ -18,7 +18,7 @@ export const sunData = {
   temp: '5,500 C',
   gravity: '274 m/s^2',
   mass: '1.989 x 10^30 kg (1,989,000,000,000,000,000,000,000,000,000) (~2 Billion-Billion-Trillion)',
-  info: "The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as visible light and infrared radiation. It is by far the most important source of energy for life on Earth. Its diameter is about 1.39 million kilometres (864,000 miles), or 109 times that of Earth. Its mass is about 330,000 times that of Earth; it accounts for about 99.86% of the total mass of the Solar System. Roughly three quarters of the Sun's mass consists of hydrogen (~73%); the rest is mostly helium (~25%), with much smaller quantities of heavier elements, including oxygen, carbon, neon and iron",
+  info: " is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as visible light and infrared radiation. It is by far the most important source of energy for life on Earth. Its diameter is about 1.39 million kilometres (864,000 miles), or 109 times that of Earth. Its mass is about 330,000 times that of Earth; it accounts for about 99.86% of the total mass of the Solar System. Roughly three quarters of the Sun's mass consists of hydrogen (~73%); the rest is mostly helium (~25%), with much smaller quantities of heavier elements, including oxygen, carbon, neon and iron",
   image: SunImg,
 };
 
@@ -32,7 +32,7 @@ export const moonData = {
   temp: '-20 C',
   gravity: '1.6 m/s^2',
   mass: '0.073 x 10^24 kg (73,000,000,000,000,000,000,000) (73 Million-Million-Billion)',
-  info: "The Moon is Earth's only natural satellite. At about one-quarter the diameter of Earth it is the largest natural satellite in the Solar System relative to the size of its planet, the fifth largest satellite in the Solar System overall, and is larger than any known dwarf planet. Orbiting Earth at an average distance of 384,400 km (238,900 mi), or about 30 times Earth's diameter, its gravitational influence slightly lengthens Earth's day and is the main driver of Earth's tides. The Moon is classified as a planetary-mass object and a differentiated rocky body, and lacks any significant atmosphere, hydrosphere, or magnetic field. Its surface gravity is about one-sixth of Earth's; Jupiter's moon Io is the only satellite in the Solar System known to have a higher surface gravity and density.",
+  info: " is Earth's only natural satellite. At about one-quarter the diameter of Earth it is the largest natural satellite in the Solar System relative to the size of its planet, the fifth largest satellite in the Solar System overall, and is larger than any known dwarf planet. Orbiting Earth at an average distance of 384,400 km (238,900 mi), or about 30 times Earth's diameter, its gravitational influence slightly lengthens Earth's day and is the main driver of Earth's tides. The Moon is classified as a planetary-mass object and a differentiated rocky body, and lacks any significant atmosphere, hydrosphere, or magnetic field. Its surface gravity is about one-sixth of Earth's; Jupiter's moon Io is the only satellite in the Solar System known to have a higher surface gravity and density.",
   image: MoonImg,
 };
 
