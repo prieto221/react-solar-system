@@ -34,9 +34,6 @@ const NavLinks = () => {
         <li>
           <a href='#quiz_link'>Quiz</a>
         </li>
-        <li>
-          <a href='#about_link'>About</a>
-        </li>
         <li className='login'>
           {!currentUser ? (
             <Link to='/login'>Log In</Link>
