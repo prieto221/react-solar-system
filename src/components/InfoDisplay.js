@@ -16,10 +16,10 @@ const InfoDisplay = ({ selectedPlanet, handleSelected }) => {
       <div className='info-display-container'>
         {currentUser && <ScrollBar />}
         <NavLinks />
-        <h1>Solar System</h1>
+        <h1>Solar System Viewer</h1>
         <SpaceImages handleSelected={handleSelected} />
         <Planet planet={selectedPlanet} />
-        <Quiz />
+        {/* <Quiz /> */}
         <About />
         <Footer />
       </div>
