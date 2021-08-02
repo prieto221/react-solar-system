@@ -133,7 +133,7 @@ const SolarSystem = ({
           </button>
           <button
             className='toggle-legend'
-            onClick={(e) => alert('Legend has not been implemented yet!')}
+            onClick={(e) => alert('Legend not implemented yet!')}
             style={{ cursor: 'pointer' }}
           >
             Toggle Legend

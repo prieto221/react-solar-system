@@ -38,7 +38,7 @@ html {
   position: absolute;
   background-color: lightgray;
   border-radius: 4px;
-  left: 20px;
+  margin: 0 12px;
   top: 20px;
   height: 30px;
   width: 30px;
@@ -51,8 +51,8 @@ html {
   top: 0;
   left: 0;
   height: 70px;
-  width: 24vw;
-  min-width: 450px;
+  width: 20vw;
+  min-width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,12 +68,12 @@ html {
 }
 
 .solar-system-container .settings {
-  margin-left: 80px;
   color: white;
 }
 
 .solar-system-container .settings button {
   cursor: pointer;
+  width: 70px;
   margin: 0 3px;
   padding: 10px;
   border-radius: 8px;
@@ -128,7 +128,7 @@ html {
   position: fixed;
   right: 0;
   top: 6vh;
-  height: 200px;
+  height: 250px;
   width: 60px;
 }
 
@@ -479,10 +479,6 @@ html {
 }
 
 .hide-days .solar-system .planet-span-day {
-  visibility: hidden;
-}
-
-.toggle-legend {
   visibility: hidden;
 }
 
@@ -853,10 +849,10 @@ html {
     overflow: hidden;
   }
   .solar-system-container .cog {
-    left: 10px;
+    top: 25px;
   }
   .solar-system-container .settings-container {
-    width: 65vw;
+    width: 70vw;
     height: 80px;
     min-width: 250px;
   }
@@ -867,8 +863,9 @@ html {
     height: 100%;
     margin-left: 50px;
   }
-  .solar-system-container button {
+  .solar-system-container .settings-container button {
     height: 50px;
+    width: 60px;
     font-size: 9px;
     margin: 0 3px;
     padding: 10px;

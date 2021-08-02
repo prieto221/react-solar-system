@@ -32,7 +32,29 @@ const NavLinks = () => {
           <a href='#home_link'>Home</a>
         </li>
         <li>
-          <a href='#quiz_link'>Quiz</a>
+          <a href='#about_link'>About</a>
+        </li>
+        <li>
+          <Link to='/quiz' onClick={(e) => alert('Quiz not implemented yet!')}>
+            Quiz
+          </Link>
+        </li>
+        <li>
+          {!currentUser ? (
+            <Link
+              to='/login'
+              onClick={(e) => alert('Profile not implemented yet!')}
+            >
+              Profile
+            </Link>
+          ) : (
+            <Link
+              to='/profile'
+              onClick={(e) => alert('Profile not implemented yet!')}
+            >
+              Profile
+            </Link>
+          )}
         </li>
         <li className='login'>
           {!currentUser ? (
