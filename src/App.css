@@ -85,7 +85,6 @@ html {
 }
 
 .info-display-container {
-  font-family: 'Cormorant Garamond', serif;
   background-color: #202020;
   height: 100%;
   width: 50vw;
@@ -107,6 +106,7 @@ html {
 
 .info-display-container h2 {
   margin: 1.1em;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .info-display-container img {
@@ -130,6 +130,7 @@ html {
 }
 
 .info-display-container .navLinks {
+  font-family: 'Cormorant Garamond', serif;
   position: fixed;
   right: 0;
   top: 6vh;
@@ -222,7 +223,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2em;
+  margin: 1em 0 2em 0;
 }
 
 .planet-container p {

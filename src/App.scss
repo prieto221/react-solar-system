@@ -125,7 +125,7 @@ html {
 
 .info-display-container {
   // z-index: 2;
-  font-family: 'Cormorant Garamond', serif;
+  // font-family: 'Cormorant Garamond', serif;
   background-color: rgb(32, 32, 32);
   height: 100%;
   width: 50vw;
@@ -147,6 +147,7 @@ html {
 
   h2 {
     margin: 1.1em;
+    font-family: 'Cormorant Garamond', serif;
   }
 
   img {
@@ -170,6 +171,7 @@ html {
   }
 
   .navLinks {
+    font-family: 'Cormorant Garamond', serif;
     position: fixed;
     right: 0;
     top: 6vh;
@@ -272,7 +274,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2em;
+  margin: 1em 0 2em 0;
 
   p {
     line-height: 1.5em;
