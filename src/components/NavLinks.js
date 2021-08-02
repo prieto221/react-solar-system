@@ -42,7 +42,7 @@ const NavLinks = () => {
         <li>
           {!currentUser ? (
             <Link
-              to='/login'
+              to='/profile'
               onClick={(e) => alert('Profile not implemented yet!')}
             >
               Profile
