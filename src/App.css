@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -85,6 +86,7 @@ html {
 }
 
 .info-display-container {
+  font-family: 'Georama', sans-serif;
   background-color: #202020;
   height: 100%;
   width: 50vw;
@@ -99,14 +101,12 @@ html {
 .info-display-container h1 {
   margin: 1.5em 1em 1em 1em;
   font-size: 2.5em;
-  font-family: 'Cormorant Garamond', serif;
   color: whitesmoke;
   text-shadow: 2px 2px 35px #2c6fec;
 }
 
 .info-display-container h2 {
   margin: 1.1em;
-  font-family: 'Cormorant Garamond', serif;
 }
 
 .info-display-container img {
@@ -130,7 +130,6 @@ html {
 }
 
 .info-display-container .navLinks {
-  font-family: 'Cormorant Garamond', serif;
   position: fixed;
   right: 0;
   top: 6vh;
