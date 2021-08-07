@@ -25,6 +25,9 @@ import ForgotPassword from './components/ForgotPassword';
 import UpdateProfile from './components/UpdateProfile';
 import MobileNavLinks from './components/MobileNavLinks';
 import HamburgerMenu from './components/HamburgerMenu';
+import Profile from './components/Profile';
+import Quiz from './components/Quiz';
+import About from './components/About';
 
 function App() {
   const [selected, setSelected] = useState(marsData);
@@ -39,10 +42,16 @@ function App() {
           <Route path='/'>
             <div className='container2'>
               <div className='empty-container'></div>
-              <InfoDisplay
-                selectedPlanet={selected}
-                handleSelected={setSelected}
-              />
+              <Switch>
+                <Profile path='/profile' />
+                <Quiz path='/quiz' />
+                <About path='/about' />
+                <InfoDisplay
+                  path='/'
+                  selectedPlanet={selected}
+                  handleSelected={setSelected}
+                />
+              </Switch>
               <SolarSystem
                 showSettings={showSettings}
                 handleShowSettings={setShowSettings}

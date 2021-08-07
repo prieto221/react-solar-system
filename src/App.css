@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Cormorant+Garamond&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Georama:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +86,19 @@ html {
   background-color: #2076bd;
 }
 
+.legend-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25vw;
+  height: 25vh;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 3;
+}
+
 .info-display-container {
+  font-family: "Raleway", sans-serif;
   background-color: #202020;
   height: 100%;
   width: 50vw;
@@ -100,19 +113,25 @@ html {
 .info-display-container h1 {
   margin: 1.5em 1em 1em 1em;
   font-size: 2.5em;
-  font-family: 'Georama', sans-serif;
   color: whitesmoke;
   text-shadow: 2px 2px 35px #2c6fec;
 }
 
 .info-display-container h2 {
   margin: 1.1em;
-  font-family: 'Georama', sans-serif;
 }
 
 .info-display-container img {
   height: 400px;
   width: 400px;
+}
+
+.info-display-container p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-display-container li {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .info-display-container .scroll-bar {
@@ -131,7 +150,6 @@ html {
 }
 
 .info-display-container .navLinks {
-  font-family: 'Georama', sans-serif;
   position: fixed;
   right: 0;
   top: 6vh;
@@ -162,6 +180,7 @@ html {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  font-family: "Raleway", sans-serif;
   color: white;
   height: 100%;
   width: 100%;
@@ -283,6 +302,7 @@ html {
 .auth-container {
   z-index: 3;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
   margin: auto;
   top: 0;
   left: 0;
@@ -296,6 +316,8 @@ html {
 
 .auth {
   background-color: #72829b;
+  box-shadow: 2px 2px 20px 2px #5f7397;
+  color: #eaf1ff;
   border-radius: 5px;
   max-width: 400px;
   width: auto;
@@ -340,6 +362,7 @@ html {
 .card .card-body h2 {
   text-align: center;
   margin-top: 20px;
+  font-family: "Raleway", sans-serif;
 }
 
 .card .card-body form {
@@ -360,7 +383,7 @@ html {
 
 .card .card-body form .form-group .form-label {
   margin: 5px 0;
-  font-weight: bold;
+  font-family: "Raleway", sans-serif;
 }
 
 .card .card-body form .form-group .form-control {
@@ -422,21 +445,22 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 16em 0;
+}
+
+.about-container .about-text {
   line-height: 1.5em;
-  margin: 5em 0;
-}
-
-.about-container h1 {
-  margin: 1em 0 0 0;
-  font-size: 30px;
-}
-
-.about-container p {
   margin: 2em;
   width: 40vw;
 }
 
+.content-wrap {
+  padding-bottom: 100px;
+}
+
 .footer-container {
+  position: absolute;
+  bottom: 0;
   margin-top: 1em;
   background-color: #114066;
   color: white;

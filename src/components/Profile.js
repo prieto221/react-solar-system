@@ -1,14 +1,10 @@
 import React from 'react';
-import About from './About';
 import Footer from './Footer';
 import NavLinks from './NavLinks';
-import Planet from './Planet';
-import Quiz from './Quiz';
 import ScrollBar from './ScrollBar';
-import SpaceImages from './SpaceImages';
 import { useAuth } from '../contexts/AuthContext';
 
-const InfoDisplay = ({ selectedPlanet, handleSelected }) => {
+const Profile = () => {
   const { currentUser } = useAuth();
 
   return (
@@ -16,13 +12,13 @@ const InfoDisplay = ({ selectedPlanet, handleSelected }) => {
       <div className='info-display-container'>
         {currentUser && <ScrollBar />}
         <NavLinks />
-        <h1>Solar System Viewer</h1>
-        <SpaceImages handleSelected={handleSelected} />
-        <Planet planet={selectedPlanet} />
+        <div className='content-wrap'>
+          <h1>Profile</h1>
+        </div>
         <Footer />
       </div>
     </a>
   );
 };
 
-export default InfoDisplay;
+export default Profile;

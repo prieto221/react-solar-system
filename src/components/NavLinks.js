@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 const NavLinks = () => {
@@ -10,6 +10,12 @@ const NavLinks = () => {
   const passwordRef = useRef();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // custom hook to get the current pathname in React
+  const usePathname = () => {
+    const location = useLocation();
+    return location.pathname;
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -29,31 +35,23 @@ const NavLinks = () => {
     <div className='navLinks'>
       <ul>
         <li>
-          <a href='#home_link'>Home</a>
+          {usePathname() === '/' ? (
+            <a href='#home_link'>Home</a>
+          ) : (
+            <Link to='/#home_link'>Home</Link>
+          )}
         </li>
         <li>
-          <a href='#about_link'>About</a>
+          <Link to='/about'>About</Link>
         </li>
         <li>
-          <Link to='/quiz' onClick={(e) => alert('Quiz not implemented yet!')}>
-            Quiz
-          </Link>
+          <Link to='/quiz'>Quiz</Link>
         </li>
         <li>
           {!currentUser ? (
-            <Link
-              to='/profile'
-              onClick={(e) => alert('Profile not implemented yet!')}
-            >
-              Profile
-            </Link>
+            <Link to='/login'>Profile</Link>
           ) : (
-            <Link
-              to='/profile'
-              onClick={(e) => alert('Profile not implemented yet!')}
-            >
-              Profile
-            </Link>
+            <Link to='/profile'>Profile</Link>
           )}
         </li>
         <li className='login'>

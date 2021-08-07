@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Cormorant+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Georama:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
 
 * {
   margin: 0;
@@ -13,6 +14,8 @@ $primary-color: rgb(32, 118, 189);
 $secondary-color: rgb(156, 56, 56);
 // $image-border: 10px outset grey;
 $image-border: 6px inset rgb(147, 166, 175);
+$style-font: 'Raleway', sans-serif;
+$regular-font: Arial, Helvetica, sans-serif;
 
 html {
   height: 100%;
@@ -124,9 +127,20 @@ html {
   }
 }
 
+.legend-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25vw;
+  height: 25vh;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 3;
+}
+
 .info-display-container {
   // z-index: 2;
-  // font-family: 'Georama', sans-serif;
+  font-family: $style-font;
   background-color: rgb(32, 32, 32);
   height: 100%;
   width: 50vw;
@@ -141,19 +155,25 @@ html {
   h1 {
     margin: 1.5em 1em 1em 1em;
     font-size: 2.5em;
-    font-family: 'Georama', sans-serif;
     color: whitesmoke;
     text-shadow: 2px 2px 35px rgb(44, 111, 236);
   }
 
   h2 {
     margin: 1.1em;
-    font-family: 'Georama', sans-serif;
   }
 
   img {
     height: 400px;
     width: 400px;
+  }
+
+  p {
+    font-family: $regular-font;
+  }
+
+  li {
+    font-family: $regular-font;
   }
 
   .scroll-bar {
@@ -172,7 +192,6 @@ html {
   }
 
   .navLinks {
-    font-family: 'Georama', sans-serif;
     position: fixed;
     right: 0;
     top: 6vh;
@@ -195,6 +214,8 @@ html {
         a {
           @include display-flex-center-center();
           text-decoration: none;
+          // font-weight: bold;
+          font-family: $style-font;
           color: white;
           height: 100%;
           width: 100%;
@@ -342,6 +363,7 @@ html {
 .auth-container {
   z-index: 3;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
   margin: auto;
   top: 0;
   left: 0;
@@ -355,7 +377,9 @@ html {
 
 .auth {
   background-color: rgb(114, 130, 155);
+  box-shadow: 2px 2px 20px 2px rgb(95, 115, 151);
   // opacity: 0.9;
+  color: rgb(234, 241, 255);
   border-radius: 5px;
   max-width: 400px;
   width: auto;
@@ -399,6 +423,7 @@ html {
     h2 {
       text-align: center;
       margin-top: 20px;
+      font-family: $style-font;
     }
 
     form {
@@ -417,7 +442,8 @@ html {
 
         .form-label {
           margin: 5px 0;
-          font-weight: bold;
+          font-family: $style-font;
+          // font-weight: bold;
         }
 
         .form-control {
@@ -484,22 +510,23 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 1.5em;
-  margin: 5em 0;
+  margin: 16em 0;
 
-  h1 {
-    margin: 1em 0 0 0;
-    font-size: 30px;
-  }
-
-  p {
+  .about-text {
+    line-height: 1.5em;
     margin: 2em;
     width: 40vw;
   }
 }
 
+.content-wrap {
+  padding-bottom: 100px;
+}
+
 .footer-container {
   // background-color: rgb(35, 104, 94);
+  position: absolute;
+  bottom: 0;
   margin-top: 1em;
   background-color: darken($primary-color, 20%);
   color: white;

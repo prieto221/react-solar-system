@@ -1,12 +1,21 @@
 import React from 'react';
+import Footer from './Footer';
+import NavLinks from './NavLinks';
+import ScrollBar from './ScrollBar';
+import { useAuth } from '../contexts/AuthContext';
 
 const Quiz = () => {
+  const { currentUser } = useAuth();
+
   return (
-    <a id='quiz_link'>
-      <div className='quiz-container'>
-        <h1>Quiz</h1>
-        <h3>Test your knowledge</h3>
-        <p>The quiz has not been implemented yet!</p>
+    <a id='home_link'>
+      <div className='info-display-container'>
+        {currentUser && <ScrollBar />}
+        <NavLinks />
+        <div className='content-wrap'>
+          <h1>Quiz</h1>
+        </div>
+        <Footer />
       </div>
     </a>
   );

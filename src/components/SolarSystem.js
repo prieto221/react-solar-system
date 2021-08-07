@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Cog from '../icons/cog-solid.svg';
+import Legend from './Legend';
 
 const SolarSystem = ({
   showNames,
@@ -7,6 +8,7 @@ const SolarSystem = ({
   showSettings,
   handleShowSettings,
 }) => {
+  const [showLegend, setShowLegend] = useState(false);
   const [showDays, setShowDays] = useState(false);
   const [mercuryDay, setMercuryDay] = useState(0);
   const [venusDay, setVenusDay] = useState(0);
@@ -132,14 +134,15 @@ const SolarSystem = ({
             Day Count
           </button>
           <button
-            className='toggle-legend'
-            onClick={(e) => alert('Legend not implemented yet!')}
+            className={showLegend ? 'pressed' : ''}
+            onClick={(e) => setShowLegend(!showLegend)}
             style={{ cursor: 'pointer' }}
           >
             Toggle Legend
           </button>
         </div>
       </div>
+      {showLegend && <Legend />}
       <div className='solar-system'>
         {/* Orbit Hierarchy */}
         <div className='orbit neptune'>
