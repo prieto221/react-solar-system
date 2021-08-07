@@ -101,12 +101,14 @@ html {
 .info-display-container h1 {
   margin: 1.5em 1em 1em 1em;
   font-size: 2.5em;
+  font-family: 'Georama', sans-serif;
   color: whitesmoke;
   text-shadow: 2px 2px 35px #2c6fec;
 }
 
 .info-display-container h2 {
   margin: 1.1em;
+  font-family: 'Georama', sans-serif;
 }
 
 .info-display-container img {
@@ -130,6 +132,7 @@ html {
 }
 
 .info-display-container .navLinks {
+  font-family: 'Georama', sans-serif;
   position: fixed;
   right: 0;
   top: 6vh;
