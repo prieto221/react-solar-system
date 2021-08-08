@@ -4,18 +4,13 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 const NavLinks = () => {
+  const location = useLocation();
   const history = useHistory();
   const { currentUser, logout } = useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-
-  // custom hook to get the current pathname in React
-  const usePathname = () => {
-    const location = useLocation();
-    return location.pathname;
-  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -35,17 +30,21 @@ const NavLinks = () => {
     <div className='navLinks'>
       <ul>
         <li>
-          {usePathname() === '/' ? (
-            <a href='#home_link'>Home</a>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          {location.pathname !== '/about' ? (
+            <Link to='/about'>About</Link>
           ) : (
-            <Link to='/#home_link'>Home</Link>
+            <a style={{ cursor: 'pointer' }}>About</a>
           )}
         </li>
         <li>
-          <Link to='/about'>About</Link>
-        </li>
-        <li>
-          <Link to='/quiz'>Quiz</Link>
+          {location.pathname !== '/quiz' ? (
+            <Link to='/quiz'>Quiz</Link>
+          ) : (
+            <a style={{ cursor: 'pointer' }}>Quiz</a>
+          )}
         </li>
         <li>
           {!currentUser ? (

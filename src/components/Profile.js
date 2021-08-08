@@ -8,21 +8,18 @@ const Profile = () => {
   const { currentUser } = useAuth();
 
   return (
-    <a id='home_link'>
-      <div className='info-display-container'>
-        {currentUser && <ScrollBar />}
-        <NavLinks />
-        <div className='content-wrap'>
-          <div className='profile-container'>
-            <h1>Profile</h1>
-            <ul>
-              <li>User email address: {currentUser.email}</li>
-            </ul>
-          </div>
+    <div className='info-display-container'>
+      <div className='content-wrap'>
+        <div className='profile-container'>
+          <h1>Profile</h1>
+          <ul>
+            <li>
+              User email address: {currentUser ? currentUser.email : 'N/A'}
+            </li>
+          </ul>
         </div>
-        <Footer />
       </div>
-    </a>
+    </div>
   );
 };
 

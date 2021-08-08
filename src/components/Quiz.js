@@ -8,19 +8,14 @@ const Quiz = () => {
   const { currentUser } = useAuth();
 
   return (
-    <a id='home_link'>
-      <div className='info-display-container'>
-        {currentUser && <ScrollBar />}
-        <NavLinks />
-        <div className='content-wrap'>
-          <div className='quiz-container'>
-            <h1>Quiz</h1>
-            <h4>Coming Soon</h4>
-          </div>
+    <div className='info-display-container'>
+      <div className='content-wrap'>
+        <div className='quiz-container'>
+          <h1>Quiz</h1>
+          <h4>Coming Soon</h4>
         </div>
-        <Footer />
       </div>
-    </a>
+    </div>
   );
 };
 

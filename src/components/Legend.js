@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Legend = () => {
+const Legend = ({ showLegend }) => {
   return (
-    <div className='legend-container'>
+    <div
+      className={
+        showLegend ? 'legend-container' : 'legend-container hideLegend'
+      }
+    >
       <ul>
         <li>Body and orbit sizes are not to scale</li>
         <li>

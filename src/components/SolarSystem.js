@@ -105,6 +105,7 @@ const SolarSystem = ({
         showNames ? 'hide-names' : ''
       } ${showDays ? 'hide-days' : ''}`}
     >
+      <div className='cog-overlay'></div>
       <img
         onClick={(e) => handleShowSettings(!showSettings)}
         className='cog'
@@ -142,7 +143,8 @@ const SolarSystem = ({
           </button>
         </div>
       </div>
-      {showLegend && <Legend />}
+      {/* {showLegend && <Legend showLegend={showLegend} />} */}
+      <Legend showLegend={showLegend} />
       <div className='solar-system'>
         {/* Orbit Hierarchy */}
         <div className='orbit neptune'>

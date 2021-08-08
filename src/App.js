@@ -15,7 +15,8 @@ import TextData, {
   neptuneData,
 } from './Textdata';
 import Signup from './components/Signup';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { AuthProvider } from './contexts/AuthContext';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
@@ -24,9 +25,7 @@ import ForgotPassword from './components/ForgotPassword';
 import UpdateProfile from './components/UpdateProfile';
 import MobileNavLinks from './components/MobileNavLinks';
 import HamburgerMenu from './components/HamburgerMenu';
-import Profile from './components/Profile';
-import Quiz from './components/Quiz';
-import About from './components/About';
+import RightSide from './components/RightSide';
 
 function App() {
   const [selected, setSelected] = useState(marsData);
@@ -36,21 +35,15 @@ function App() {
   return (
     <>
       {/* <div className='App' style={{ backgroundImage: `${Stars}` }}></div> */}
-      <Router>
+      <BrowserRouter>
         <AuthProvider>
           <Route path='/'>
             <div className='container2'>
               <div className='empty-container'></div>
-              <Switch>
-                <Profile path='/profile' />
-                <Quiz path='/quiz' />
-                <About path='/about' />
-                <InfoDisplay
-                  path='/'
-                  selectedPlanet={selected}
-                  handleSelected={setSelected}
-                />
-              </Switch>
+              <RightSide
+                selectedPlanet={selected}
+                handleSelected={setSelected}
+              />
               <SolarSystem
                 showSettings={showSettings}
                 handleShowSettings={setShowSettings}
@@ -68,7 +61,7 @@ function App() {
           <Route path='/mobile-nav-links' exact component={MobileNavLinks} />
           <HamburgerMenu />
         </AuthProvider>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }

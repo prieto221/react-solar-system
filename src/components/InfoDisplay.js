@@ -12,16 +12,13 @@ const InfoDisplay = ({ selectedPlanet, handleSelected }) => {
   const { currentUser } = useAuth();
 
   return (
-    <a id='home_link'>
-      <div className='info-display-container'>
-        {currentUser && <ScrollBar />}
-        <NavLinks />
+    <div className='info-display-container'>
+      <div className='content-wrap'>
         <h1>Solar System Viewer</h1>
         <SpaceImages handleSelected={handleSelected} />
         <Planet planet={selectedPlanet} />
-        <Footer />
       </div>
-    </a>
+    </div>
   );
 };
 
