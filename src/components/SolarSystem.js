@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Cog from '../icons/cog-solid.svg';
+import Cog from '../icons/cog-white.png';
 import Legend from './Legend';
 
 const SolarSystem = ({

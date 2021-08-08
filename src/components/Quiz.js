@@ -13,7 +13,10 @@ const Quiz = () => {
         {currentUser && <ScrollBar />}
         <NavLinks />
         <div className='content-wrap'>
-          <h1>Quiz</h1>
+          <div className='quiz-container'>
+            <h1>Quiz</h1>
+            <h4>Coming Soon</h4>
+          </div>
         </div>
         <Footer />
       </div>

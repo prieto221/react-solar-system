@@ -13,7 +13,12 @@ const Profile = () => {
         {currentUser && <ScrollBar />}
         <NavLinks />
         <div className='content-wrap'>
-          <h1>Profile</h1>
+          <div className='profile-container'>
+            <h1>Profile</h1>
+            <ul>
+              <li>User email address: {currentUser.email}</li>
+            </ul>
+          </div>
         </div>
         <Footer />
       </div>

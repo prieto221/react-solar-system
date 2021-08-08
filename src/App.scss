@@ -24,6 +24,23 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90, 1);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 @mixin display-flex-center-center {
   display: flex;
   justify-content: center;
@@ -58,10 +75,9 @@ html {
   .cog {
     cursor: pointer;
     position: absolute;
-    background-color: lightgray;
+    // background-color: rgba(0, 0, 0, 0.85);
     border-radius: 4px;
     margin: 0 12px;
-    // left: 20px;
     top: 20px;
     height: 30px;
     width: 30px;
@@ -90,9 +106,11 @@ html {
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
     opacity: 0.6;
-    border-radius: 0 15px 15px 0px;
+    border-radius: 0 3px 3px 0px;
     z-index: 3;
-    // box-shadow: 0px -5px 10px 10px $secondary-color;
+    background-color: lighten($primary-color, 50%);
+    border: 3px solid $secondary-color;
+    // box-shadow: 1px 1px 15px 1px rgb(255, 168, 168);
   }
 
   .settings-container.hideSettings {
@@ -109,6 +127,7 @@ html {
       margin: 0 3px;
       padding: 10px;
       border-radius: 8px;
+      background-color: lighten($primary-color, 50%);
 
       &:hover {
         // margin: 0 2px;
@@ -128,14 +147,30 @@ html {
 }
 
 .legend-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 1em;
+  left: 1em;
+  border-radius: 3px;
   width: 25vw;
   height: 25vh;
-  background-color: white;
+  background-color: lighten($primary-color, 50%);
+  border: 4px solid $secondary-color;
   opacity: 0.8;
-  z-index: 3;
+  z-index: 2;
+  list-style-position: inside;
+
+  ul {
+    padding-left: 0.5em;
+    list-style-type: square;
+  }
+
+  h4 {
+    padding-top: 1em;
+  }
 }
 
 .info-display-container {
@@ -196,6 +231,7 @@ html {
     right: 0;
     top: 6vh;
     height: 250px;
+    margin-right: 10px;
     // height: 54px;
     // width: 15vw;
     width: 60px;
@@ -375,6 +411,14 @@ html {
   min-height: 100vh;
 }
 
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  position: absolute;
+}
+
 .auth {
   background-color: rgb(114, 130, 155);
   box-shadow: 2px 2px 20px 2px rgb(95, 115, 151);
@@ -490,11 +534,10 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 4px double white;
   width: 40vw;
 
   h1 {
-    margin: 0.5em 0 0.5em 0;
+    margin: 2em 0;
   }
 
   p {
@@ -502,6 +545,17 @@ html {
     justify-content: center;
     align-items: center;
     padding: 10em 0;
+  }
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    list-style-type: none;
   }
 }
 
@@ -589,10 +643,6 @@ html {
     }
   }
 }
-
-// .toggle-legend {
-//   visibility: hidden;
-// }
 
 .orbit {
   height: 100%;

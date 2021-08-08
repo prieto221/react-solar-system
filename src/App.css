@@ -14,6 +14,23 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .container2 {
   display: flex;
 }
@@ -39,7 +56,6 @@ html {
 .solar-system-container .cog {
   cursor: pointer;
   position: absolute;
-  background-color: lightgray;
   border-radius: 4px;
   margin: 0 12px;
   top: 20px;
@@ -62,8 +78,10 @@ html {
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
   opacity: 0.6;
-  border-radius: 0 15px 15px 0px;
+  border-radius: 0 3px 3px 0px;
   z-index: 3;
+  background-color: #e2effa;
+  border: 3px solid #9c3838;
 }
 
 .solar-system-container .settings-container.hideSettings {
@@ -80,6 +98,7 @@ html {
   margin: 0 3px;
   padding: 10px;
   border-radius: 8px;
+  background-color: #e2effa;
 }
 
 .solar-system-container .settings .pressed {
@@ -87,14 +106,30 @@ html {
 }
 
 .legend-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 1em;
+  left: 1em;
+  border-radius: 3px;
   width: 25vw;
   height: 25vh;
-  background-color: white;
+  background-color: #e2effa;
+  border: 4px solid #9c3838;
   opacity: 0.8;
-  z-index: 3;
+  z-index: 2;
+  list-style-position: inside;
+}
+
+.legend-container ul {
+  padding-left: 0.5em;
+  list-style-type: square;
+}
+
+.legend-container h4 {
+  padding-top: 1em;
 }
 
 .info-display-container {
@@ -154,6 +189,7 @@ html {
   right: 0;
   top: 6vh;
   height: 250px;
+  margin-right: 10px;
   width: 60px;
 }
 
@@ -314,6 +350,14 @@ html {
   min-height: 100vh;
 }
 
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  position: absolute;
+}
+
 .auth {
   background-color: #72829b;
   box-shadow: 2px 2px 20px 2px #5f7397;
@@ -425,12 +469,11 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 4px double white;
   width: 40vw;
 }
 
 .quiz-container h1 {
-  margin: 0.5em 0 0.5em 0;
+  margin: 2em 0;
 }
 
 .quiz-container p {
@@ -438,6 +481,17 @@ html {
   justify-content: center;
   align-items: center;
   padding: 10em 0;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container ul {
+  list-style-type: none;
 }
 
 .about-container {
