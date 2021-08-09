@@ -87,46 +87,53 @@ a {
 
 .solar-system-container .settings-container {
   position: absolute;
-  background-color: #9c3838;
+  padding-right: 100px;
   margin-left: 60px;
   top: 0;
   left: 0;
   height: 70px;
-  width: 13vw;
   min-width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(0);
+  transform: translateX(0);
   transition: transform 0.5s ease-in-out;
   opacity: 0.6;
   border-radius: 0 3px 3px 0px;
   z-index: 3;
-  background-color: #e2effa;
-  border: 3px solid #9c3838;
-  box-shadow: 0 0 10px 1px #2076bd;
 }
 
 .solar-system-container .settings-container.hideSettings {
-  transform: translateY(-110%);
+  transform: translateX(-120%);
 }
 
 .solar-system-container .settings {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.solar-system-container .settings button {
-  cursor: pointer;
-  width: 70px;
-  margin: 0 3px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: #e2effa;
+.solar-system-container .settings .btn2 {
+  position: relative;
+  color: #999;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
 }
 
 .solar-system-container .settings .pressed {
-  background-color: #2076bd;
-  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  background: #fff;
+  padding: 15px 20px;
+  color: #1b1b1b;
 }
 
 .legend-container {
@@ -987,24 +994,10 @@ a {
   .solar-system-container .cog {
     top: 25px;
   }
-  .solar-system-container .settings-container {
-    width: 70vw;
-    height: 80px;
-    min-width: 250px;
-  }
-  .solar-system-container .settings-container .settings {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-left: 50px;
-  }
-  .solar-system-container .settings-container button {
-    height: 50px;
-    width: 60px;
+  .solar-system-container .settings-container .settings button {
     font-size: 9px;
-    margin: 0 3px;
-    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .navLinks {
     visibility: hidden;

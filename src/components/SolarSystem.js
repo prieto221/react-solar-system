@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Cog from '../icons/cog-white.png';
 import Legend from './Legend';
+import HamburgerMenu from './HamburgerMenu';
 
 const SolarSystem = ({
   showNames,
@@ -106,6 +107,7 @@ const SolarSystem = ({
       } ${showDays ? 'hide-days' : ''}`}
     >
       <div className='cog-overlay'></div>
+      <HamburgerMenu />
       <img
         onClick={(e) => handleShowSettings(!showSettings)}
         className='cog'
@@ -121,21 +123,21 @@ const SolarSystem = ({
       >
         <div className='settings'>
           <button
-            className={showNames ? '' : 'pressed'}
+            className={showNames ? 'btn2' : 'btn2 pressed'}
             onClick={(e) => handleShowNames(!showNames)}
             style={{ cursor: 'pointer' }}
           >
             Planet Names
           </button>
           <button
-            className={showDays ? '' : 'pressed'}
+            className={showDays ? 'btn2' : 'btn2 pressed'}
             onClick={(e) => setShowDays(!showDays)}
             style={{ cursor: 'pointer' }}
           >
             Day Count
           </button>
           <button
-            className={showLegend ? 'pressed' : ''}
+            className={showLegend ? 'btn2 pressed' : 'btn2'}
             onClick={(e) => setShowLegend(!showLegend)}
             style={{ cursor: 'pointer' }}
           >

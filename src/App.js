@@ -59,7 +59,6 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/forgot-password' component={ForgotPassword} />
           <Route path='/mobile-nav-links' exact component={MobileNavLinks} />
-          <HamburgerMenu />
         </AuthProvider>
       </BrowserRouter>
     </>

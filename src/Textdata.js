@@ -14,6 +14,7 @@ export const sunData = {
   rank: 0,
   distance: '---',
   orbitTime: '---',
+  dayLength: '---',
   diameter: '1,392,700 km',
   temp: '5,500 C',
   gravity: '274 m/s^2',
