@@ -146,7 +146,7 @@ const SolarSystem = ({
         </div>
       </div>
       {/* {showLegend && <Legend showLegend={showLegend} />} */}
-      <Legend showLegend={showLegend} />
+      <Legend showLegend={showLegend} handleShowLegend={setShowLegend} />
       <div className='solar-system'>
         {/* Orbit Hierarchy */}
         <div className='orbit neptune'>

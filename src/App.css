@@ -99,7 +99,6 @@ a {
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
   opacity: 0.6;
-  border-radius: 0 3px 3px 0px;
   z-index: 3;
 }
 
@@ -147,27 +146,48 @@ a {
   border-radius: 3px;
   width: 25vw;
   height: 25vh;
-  background-color: #e2effa;
+  background: rgba(0, 0, 0, 0.4);
+  background: #fff;
+  color: #1b1b1b;
   box-shadow: 0 0 10px 1px #2076bd;
-  border: 4px solid #9c3838;
-  opacity: 0.8;
+  border: 2px outset grey;
+  opacity: 0.7;
   z-index: 2;
+  padding: 10px 20px;
   list-style-position: inside;
   transform: translateY(0);
-  transition: transform 0.6s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .legend-container ul {
   padding-left: 0.5em;
   list-style-type: square;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .legend-container h4 {
   padding-top: 1em;
+  font-size: 1em;
 }
 
 .legend-container.hideLegend {
-  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close-btn {
+  position: absolute;
+  margin: 6px;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #9c3838;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .info-display-container {
@@ -990,9 +1010,6 @@ a {
     height: 100vw;
     width: 100%;
     overflow: hidden;
-  }
-  .solar-system-container .cog {
-    top: 25px;
   }
   .solar-system-container .settings-container .settings button {
     font-size: 9px;

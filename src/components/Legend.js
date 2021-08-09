@@ -1,12 +1,18 @@
 import React from 'react';
 
-const Legend = ({ showLegend }) => {
+const Legend = ({ showLegend, handleShowLegend }) => {
   return (
     <div
       className={
         showLegend ? 'legend-container' : 'legend-container hideLegend'
       }
     >
+      <button
+        onClick={(e) => handleShowLegend(!showLegend)}
+        className='close-btn'
+      >
+        X
+      </button>
       <ul>
         <li>Body and orbit sizes are not to scale</li>
         <li>
