@@ -202,8 +202,16 @@ a {
 .info-display-container {
   // z-index: 2;
   font-family: $style-font;
-  background-color: rgb(32, 32, 32);
+  // background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(32, 32, 32),
+    darken($primary-color, 20%),
+    rgb(32, 32, 32)
+  );
+  // background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   width: 50vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -238,18 +246,27 @@ a {
 
 .scroll-bar {
   position: absolute;
-  background-color: darken($primary-color, 20%);
+  // background-color: rgb(202, 202, 202);
+  // background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+    to right,
+    rgba(32, 32, 32, 0),
+    rgba(32, 32, 32, 1)
+  );
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   height: 40px;
   width: 50vw;
-  top: 0;
+  top: 10px;
   right: 0;
   z-index: 1;
 
   p {
-    margin-left: 26px;
-    color: rgb(236, 235, 235);
+    margin-right: 26px;
+    // color: rgb(236, 235, 235);
+    color: lighten($primary-color, 40%);
+    font-weight: bold;
   }
 }
 
@@ -390,7 +407,8 @@ a {
   img {
     // border: 10px outset darken($image-border-color, 10%);
     // border: $image-border;
-    box-shadow: 2px 2px 30px 6px rgba(44, 111, 236, 0.356);
+    // box-shadow: 2px 2px 30px 6px rgba(44, 111, 236, 0.356);
+    box-shadow: 2px 2px 30px 6px lighten($primary-color, 20%);
     // object-fit: contain;
     margin: 0 1vw;
     border-radius: 10px;
