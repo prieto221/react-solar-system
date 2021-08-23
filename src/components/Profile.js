@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from './Footer';
-import ScrollBar from './ScrollBar';
 import { useAuth } from '../contexts/AuthContext';
 
 const Profile = () => {
