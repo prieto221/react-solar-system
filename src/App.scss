@@ -902,41 +902,41 @@ a {
 
 @keyframes neptuneOrbit {
   from {
-    transform: rotate(0deg) translateX(22.5vw) rotate(360deg);
+    transform: rotate(30deg) translateX(22.5vw) rotate(330deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(22.5vw) rotate(0deg);
+    transform: rotate(390deg) translateX(22.5vw) rotate(-30deg);
   }
 }
 
 @keyframes uranusOrbit {
   from {
-    transform: rotate(0deg) translateX(20vw) rotate(360deg);
+    transform: rotate(300deg) translateX(20vw) rotate(60deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(20vw) rotate(0deg);
+    transform: rotate(660deg) translateX(20vw) rotate(-300deg);
   }
 }
 
 @keyframes saturnOrbit {
   from {
-    transform: rotate(0deg) translateX(17.5vw) rotate(360deg);
+    transform: rotate(100deg) translateX(17.5vw) rotate(260deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(17.5vw) rotate(0deg);
+    transform: rotate(460deg) translateX(17.5vw) rotate(-100deg);
   }
 }
 
 @keyframes jupiterOrbit {
   from {
-    transform: rotate(0deg) translateX(15vw) rotate(360deg);
+    transform: rotate(200deg) translateX(15vw) rotate(160deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(15vw) rotate(0deg);
+    transform: rotate(560deg) translateX(15vw) rotate(-200deg);
   }
 }
 
@@ -952,31 +952,31 @@ a {
 
 @keyframes earthOrbit {
   from {
-    transform: rotate(0deg) translateX(8vw) rotate(360deg);
+    transform: rotate(40deg) translateX(8vw) rotate(320deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(8vw) rotate(0deg);
+    transform: rotate(400deg) translateX(8vw) rotate(-40deg);
   }
 }
 
 @keyframes venusOrbit {
   from {
-    transform: rotate(0deg) translateX(6vw) rotate(360deg);
+    transform: rotate(100deg) translateX(6vw) rotate(260deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(6vw) rotate(0deg);
+    transform: rotate(460deg) translateX(6vw) rotate(-100deg);
   }
 }
 
 @keyframes mercuryOrbit {
   from {
-    transform: rotate(0deg) translateX(4.5vw) rotate(360deg);
+    transform: rotate(250deg) translateX(4.5vw) rotate(110deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(4.5vw) rotate(0deg);
+    transform: rotate(610deg) translateX(4.5vw) rotate(-250deg);
   }
 }
 
